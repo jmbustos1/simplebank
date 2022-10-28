@@ -18,7 +18,7 @@ const (
 // dbSource = "postgresql://root:secret@localhost:54
 )
 
-func main8() {
+func main5() {
 	//var q *db.Store
 	//var d *sql.DB
 
@@ -27,7 +27,7 @@ func main8() {
 	if err != nil {
 		log.Fatal("cannot connect to db:", err)
 	}
-	acc := 5
+	acc := 33
 	store := db.NewStore(conn)
 	account, err := store.GetAccount(context.Background(), int64(acc))
 	if err != nil {
@@ -37,7 +37,7 @@ func main8() {
 		fmt.Println("account to be deleted", account)
 	}
 
-	store2 := db.NewStore(conn)
+	store2 := db.New(conn)
 	err = store2.DeleteAccount(context.Background(), int64(acc))
 	if err != nil {
 		fmt.Println("Hello World!")

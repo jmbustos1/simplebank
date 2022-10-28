@@ -18,7 +18,7 @@ const (
 // dbSource = "postgresql://root:secret@localhost:54
 )
 
-func main7() {
+func main3() {
 	//var q *db.Store
 	//var d *sql.DB
 
@@ -29,7 +29,7 @@ func main7() {
 	}
 	store := db.NewStore(conn)
 	arg := db.CreateAccountParams{
-		Owner:    "mmmmbb",
+		Owner:    "mmmebb",
 		Currency: "USD",
 		Balance:  0,
 	}
